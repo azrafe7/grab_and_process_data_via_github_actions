@@ -21,3 +21,9 @@ jobs:
         pip install -r requirements.txt
     - run: ls
     - run: python main.py
+    - name: Checkout external repo
+      uses: actions/checkout@v2
+      with:
+        repository: pcm-dpc/COVID-19
+        path: COVID-19
+    - run: ls
