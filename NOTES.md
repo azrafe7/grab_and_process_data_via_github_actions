@@ -6,18 +6,18 @@
  - [github push action (by @ad-m)](https://github.com/ad-m/github-push-action)
  - [run Github Actions locally](https://github.com/nektos/act)
  - [manually trigger Github Actions](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e)
+
  - [how-to-run-jupiter-keras-tensorflow-pandas-sklearn-and-matplotlib-in-docker-container](https://medium.com/@andreimaksimov/how-to-run-jupiter-keras-tensorflow-pandas-sklearn-and-matplotlib-in-docker-container-35a49fd4b175)
- 
+
  # run locally (windows)
- install chocolatey
- install act cli via chocolatey 
- install docker-desktop (win10), or docker-toolkit (win < 10, which I have) via chocolatey  https://www.smarthomebeginner.com/install-docker-on-windows-7-8-10/
- 
- 
+  - install chocolatey
+  - install act cli via chocolatey
+  - install docker-desktop (win10), or docker-toolkit (win < 10, which I have) via chocolatey  https://www.smarthomebeginner.com/install-docker-on-windows-7-8-10/
+
+
  # docker container
- mkdir ubuntu-node-pandas
- create Dockerfile
- cd
- docker build -t azrafe7/ubuntu-node-pandas:12.6-buster-slim .
- 
- 
+  - mkdir ubuntu-node-pandas
+  - create Dockerfile
+  - cd
+  - docker build -t azrafe7/ubuntu-node-pandas:12.6-buster-slim .
+
