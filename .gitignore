@@ -50,3 +50,15 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+
+# python venv and cache
+venv/
+
+__pycache__/
+tmp/
+.secrets/
+
+/*.json
+/*.pickle
+.env
