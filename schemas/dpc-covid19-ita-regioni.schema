@@ -1,0 +1,93 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string"
+        },
+        "stato": {
+          "type": "string"
+        },
+        "codice_regione": {
+          "type": "integer"
+        },
+        "denominazione_regione": {
+          "type": "string"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "long": {
+          "type": "number"
+        },
+        "ricoverati_con_sintomi": {
+          "type": "integer"
+        },
+        "terapia_intensiva": {
+          "type": "integer"
+        },
+        "totale_ospedalizzati": {
+          "type": "integer"
+        },
+        "isolamento_domiciliare": {
+          "type": "integer"
+        },
+        "totale_positivi": {
+          "type": "integer"
+        },
+        "variazione_totale_positivi": {
+          "type": "integer"
+        },
+        "nuovi_positivi": {
+          "type": "integer"
+        },
+        "dimessi_guariti": {
+          "type": "integer"
+        },
+        "deceduti": {
+          "type": "integer"
+        },
+        "totale_casi": {
+          "type": "integer"
+        },
+        "tamponi": {
+          "type": "integer"
+        },
+        "casi_testati": {
+          "type": "integer"
+        },
+        "note_it": {
+          "type": "string"
+        },
+        "note_en": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data",
+        "stato",
+        "codice_regione",
+        "denominazione_regione",
+        "lat",
+        "long",
+        "ricoverati_con_sintomi",
+        "terapia_intensiva",
+        "totale_ospedalizzati",
+        "isolamento_domiciliare",
+        "totale_positivi",
+        "variazione_totale_positivi",
+        "nuovi_positivi",
+        "dimessi_guariti",
+        "deceduti",
+        "totale_casi",
+        "tamponi",
+        "casi_testati",
+        "note_it",
+        "note_en"
+      ]
+    }
+  ]
+}

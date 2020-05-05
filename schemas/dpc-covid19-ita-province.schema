@@ -1,0 +1,61 @@
+{
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "type": "array",
+  "items": [
+    {
+      "type": "object",
+      "properties": {
+        "data": {
+          "type": "string"
+        },
+        "stato": {
+          "type": "string"
+        },
+        "codice_regione": {
+          "type": "integer"
+        },
+        "denominazione_regione": {
+          "type": "string"
+        },
+        "codice_provincia": {
+          "type": "integer"
+        },
+        "denominazione_provincia": {
+          "type": "string"
+        },
+        "sigla_provincia": {
+          "type": "string"
+        },
+        "lat": {
+          "type": "number"
+        },
+        "long": {
+          "type": "number"
+        },
+        "totale_casi": {
+          "type": "integer"
+        },
+        "note_it": {
+          "type": "string"
+        },
+        "note_en": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "data",
+        "stato",
+        "codice_regione",
+        "denominazione_regione",
+        "codice_provincia",
+        "denominazione_provincia",
+        "sigla_provincia",
+        "lat",
+        "long",
+        "totale_casi",
+        "note_it",
+        "note_en"
+      ]
+    }
+  ]
+}
