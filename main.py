@@ -5,7 +5,7 @@ import os
 import glob
 from collections import namedtuple
 import json
-from jsonschema import validate
+import jsonschema
 
 
 COVID_19_REPO_FOLDER = 'COVID-19'
@@ -17,7 +17,7 @@ if not os.path.exists(COVID_19_REPO_FOLDER):
 SCHEMAS_FOLDER = 'schemas'
 
 
-Utf8ErrorEntry = namedtuple("Utf8ErrorEntry", ("filename", "errors"))
+ErrorEntry = namedtuple("ErrorEntry", ("filename", "errors"))
 
 schemas = {}
 def getJsonSchemaFor(filename):
@@ -26,7 +26,7 @@ def getJsonSchemaFor(filename):
     suffix = '-latest'
     if schemaName.endswith(suffix): schemaName = schemaName[:-len(suffix)]
     schemaName = os.path.join(SCHEMAS_FOLDER, schemaName + '.schema')
-    print(schemaName)
+    #print(schemaName)
     if schemaName in schemas:
         schema = schemas[schemaName]
     else:
@@ -34,13 +34,16 @@ def getJsonSchemaFor(filename):
             raise Exception('No schema file named "{0}".'.format(schemaName))
         with open(schemaName, 'r') as jsonFile:
             schema = json.load(jsonFile)
+            schemas[schemaName] = schema
+            print('[LOAD SCHEMA] {0}'.format(os.path.basename(schemaName)))
+
     return schema
 
 
 if __name__ == '__main__':
     print('Hello Github Action Python')
 
-    print(COVID_19_REPO_FOLDER)
+    print('[COVID FOLDER] {0}'.format(COVID_19_REPO_FOLDER))
 
     print()
 
@@ -50,24 +53,44 @@ if __name__ == '__main__':
     errorsList = []
 
     filesToValidate = csvFiles + jsonFiles
-    print('Validating utf8 in {0} files...'.format(len(filesToValidate)))
+    print('[UTF8] Validating utf8 in {0} files...'.format(len(filesToValidate)))
     for file in filesToValidate:
         with open(file, 'rb') as f:
             fileContent = f.read()
             errors = find_utf8_errors(fileContent)
             if errors:
-                errorsList.append(Utf8ErrorEntry(file, errors))
+                errorsList.append(ErrorEntry(file, errors))
 
     print('- Errors found: {0}'.format(len(errorsList)))
-    for entry in errorsList:
-        print('  ' + entry.filename)
+    for i, entry in enumerate(errorsList):
+        print('  [{0:02}] {1}'.format(i, entry.filename))
         for error in entry.errors:
-            print(error.extract)
+            print('     ' + error.extract)
+        print()
 
 
-    print('Validating json schema in {0} files...'.format(len(jsonFiles)))
+    verboseJsonErrors = True
+    errorsList = []
+
+    print('[JSON] Validating json schema in {0} files...'.format(len(jsonFiles)))
     for file in jsonFiles:
-        print(file)
         schema = getJsonSchemaFor(file)
-        print(file, schema)
+        #print(file)
+        #print(file, schema)
+        with open(file, 'r') as f:
+            instance = json.load(f)
+            try:
+                jsonschema.validate(instance=instance, schema=schema)
+            except jsonschema.exceptions.ValidationError as e:
+                errorsList.append(ErrorEntry(file, e))
 
+    print('- Errors found: {0}'.format(len(errorsList)))
+    for i, entry in enumerate(errorsList):
+        print('  [{0:02}] {1}'.format(i, entry.filename))
+        if not verboseJsonErrors:
+            print('       ' + entry.errors.message)
+        else:
+            error = str(entry.errors)
+            error = error.replace('\n', '\n       ')
+            print('       ' + error)
+        print()

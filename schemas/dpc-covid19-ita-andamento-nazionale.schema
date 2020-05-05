@@ -24,7 +24,7 @@
           "type": "integer"
         },
         "totale_positivi": {
-          "type": "string"
+          "type": "integer"
         },
         "variazione_totale_positivi": {
           "type": "integer"
