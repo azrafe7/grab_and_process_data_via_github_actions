@@ -80,7 +80,7 @@ if __name__ == '__main__':
         with open(file, 'r') as f:
             instance = json.load(f)
             try:
-                jsonschema.validate(instance=instance, schema=schema)
+                jsonschema.validate(instance=instance, schema=schema, format_checker=jsonschema.FormatChecker())
             except jsonschema.exceptions.ValidationError as e:
                 errorsList.append(ErrorEntry(file, e))
 
