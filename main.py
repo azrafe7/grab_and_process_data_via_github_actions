@@ -41,7 +41,7 @@ def getJsonSchemaFor(filename):
 
 
 if __name__ == '__main__':
-    print('Hello Github Action Python')
+    print('Hello Github Actions Python')
 
     print('[COVID FOLDER] {0}'.format(COVID_19_REPO_FOLDER))
 
@@ -67,7 +67,8 @@ if __name__ == '__main__':
         for error in entry.errors:
             print('     ' + error.extract)
         print()
-
+    if not errorsList:
+        print()
 
     verboseJsonErrors = True
     errorsList = []
