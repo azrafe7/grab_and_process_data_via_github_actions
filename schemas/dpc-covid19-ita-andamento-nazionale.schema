@@ -45,7 +45,7 @@
           "type": "integer"
         },
         "casi_testati": {
-          "type": "integer"
+          "type": ["integer", "null"]
         },
         "note_it": {
           "type": "string"
