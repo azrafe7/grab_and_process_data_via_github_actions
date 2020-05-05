@@ -62,3 +62,5 @@ tmp/
 /*.json
 /*.pickle
 .env
+
+.vscode/
