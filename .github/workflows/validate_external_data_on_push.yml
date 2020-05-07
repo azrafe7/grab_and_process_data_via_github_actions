@@ -28,3 +28,11 @@ jobs:
         path: COVID-19
     - run: ls
     - run: python main.py
+    - name: Github Context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github) }}
+      run:
+        echo "$GITHUB_CONTEXT"
+    - name: Prev Github Context
+      run:
+        echo "$GITHUB_CONTEXT"
