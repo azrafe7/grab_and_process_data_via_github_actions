@@ -10,9 +10,10 @@ import rich.traceback
 rich.traceback.install()
 
 from rich.console import Console
-console = Console()
+console = Console(record=True, force_terminal=True)
+console.print("Testing 💵[yellow]rich[/] console")
 console.log([1, "str"], 'https://github.com/willmcgugan/rich/blob/9cba2027f4/tests/test_color_triplet.py', {"k": 'v', "date": '00:46:54'}, None, '2009-11-27T00:00:00.000100-06:39')
-assert 0, "er, 'oeroeoreo'"
+
 
 COVID_19_REPO_FOLDER = 'COVID-19'
 if not os.path.exists(COVID_19_REPO_FOLDER):
@@ -101,7 +102,4 @@ if __name__ == '__main__':
             error = error.replace('\n', '\n       ')
             print('       ' + error)
         print()
-
-    console.log("[log] this")
-    console.print("[print] this")
 

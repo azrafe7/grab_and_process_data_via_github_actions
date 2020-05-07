@@ -1,11 +1,12 @@
 # This is a basic workflow to help you get started with Actions
 
-name: On New Issue Creation
+name: On Issue New Comment
 
-# Controls when the action will run. Triggers the workflow when a new issue is opened, but only for the master branch
+# Controls when the action will run. Triggers the workflow when a new issue COMMENT is created (on an ALREADY OPENED issue)
+# but only for the master branch
 on:
-  issues:
-    types: [opened]
+  issue_comment:
+    types: [created]
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:

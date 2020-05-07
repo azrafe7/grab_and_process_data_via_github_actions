@@ -1,4 +1,5 @@
-name: test-python
+name: Validate Data On Push
+
 on: push
 
 jobs:
