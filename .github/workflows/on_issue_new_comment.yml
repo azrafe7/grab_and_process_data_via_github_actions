@@ -20,4 +20,4 @@ jobs:
         echo "$GITHUB_CONTEXT"
     - name: exctract something from github context
       run:
-        echo "$GITHUB_CONTEXT['event']"
+        echo "$GITHUB_CONTEXT"
