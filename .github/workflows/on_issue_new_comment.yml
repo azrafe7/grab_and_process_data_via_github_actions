@@ -14,8 +14,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - name: print $github
-      run:
-        echo "$GITHUB_CONTEXT"
       env:
         GITHUB_CONTEXT: ${{ toJson(github) }}
-
+      run:
+        echo "$GITHUB_CONTEXT"
+    - name: print comment body
+      env:
+        COMMENT_BODY: ${{ toJson(github).issue.body }}
+      run:
+        echo "$COMMENT_BODY"
