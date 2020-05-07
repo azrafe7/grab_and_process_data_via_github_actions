@@ -20,6 +20,6 @@ jobs:
         echo "$GITHUB_CONTEXT"
     - name: print comment body
       env:
-        COMMENT_BODY: ${{ toJson(github).issue.body }}
+        COMMENT_BODY: ${{ toJson(github).event.comment.body }}
       run:
         echo "$COMMENT_BODY"
