@@ -3,8 +3,9 @@ name: Validate Data On Push
 on: push
 
 jobs:
-  test:
+  validation_test:
     runs-on: ubuntu-latest
+    if: ${{ false }}
     steps:
     - uses: actions/checkout@v2
     - uses: actions/setup-python@v2
