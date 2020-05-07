@@ -19,5 +19,7 @@ jobs:
       run:
         echo "$GITHUB_CONTEXT"
     - name: exctract something from github context
+      env:
+        GITHUB_CONTEXT: ${{ toJson(github['job']) }}
       run:
         echo "$GITHUB_CONTEXT"
