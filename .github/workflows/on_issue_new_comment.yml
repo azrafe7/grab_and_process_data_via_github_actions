@@ -29,6 +29,7 @@ jobs:
       with:
         issue-number: ${{ github.event.issue.number }}
         body: |
+          Hello ${{ github.actor }}! 
           This is a multi-line test comment
           - With GitHub **Markdown**
           - Created by [create-or-update-comment][1]
