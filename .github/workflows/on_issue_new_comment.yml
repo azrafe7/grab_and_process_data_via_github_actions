@@ -30,9 +30,7 @@ jobs:
         issue-number: ${{ github.event.issue.number }}
         body: |
           Hello @${{ github.actor }}! :smile:
+          
+          With more reactions now. :hooray:
 
-          This is a wonderful markdown test comment
-          - Created by [many][1]
-
-          [1]: https://github.com/azrafe7/grab_and_process_data_via_github_actions/blob/master/NOTES.md
-        reactions: 'eye'
+        reactions: eyes, heart, laugh
