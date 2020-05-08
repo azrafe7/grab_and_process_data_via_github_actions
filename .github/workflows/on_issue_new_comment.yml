@@ -29,10 +29,10 @@ jobs:
       with:
         issue-number: ${{ github.event.issue.number }}
         body: |
-          Hello ${{ github.actor }}! 
-          This is a multi-line test comment
-          - With GitHub **Markdown**
-          - Created by [create-or-update-comment][1]
-  
-          [1]: https://github.com/peter-evans/create-or-update-comment
-        reactions: '+1'
+          Hello @${{ github.actor }}! :smile:
+
+          This is a wonderful markdown test comment
+          - Created by [many][1]
+
+          [1]: https://github.com/azrafe7/grab_and_process_data_via_github_actions/blob/master/NOTES.md
+        reactions: 'eye'
