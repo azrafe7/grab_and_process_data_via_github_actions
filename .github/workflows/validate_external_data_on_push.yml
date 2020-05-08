@@ -31,8 +31,9 @@ jobs:
     - name: Github Context
       env:
         GITHUB_REPO: ${{ toJson(github['repository']) }}
-      run:
+      run: |
         echo "$GITHUB_REPO"
+        echo "::set-env name=GITHUB_REPO::$GITHUB_REPO"
     - name: Prev Github Context
       run:
         echo "$GITHUB_REPO"
