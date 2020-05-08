@@ -2,12 +2,16 @@
 
  - [Possible to commit files after workflow runs?](https://github.community/t5/GitHub-Actions/Possible-to-commit-files-after-workflow-runs/td-p/49755#)
  - [Can GitHub actions directly edit files in a repository?](https://github.community/t5/GitHub-Actions/Can-GitHub-actions-directly-edit-files-in-a-repository/td-p/50551#)
- - [github action to copy a file from one repo to another](https://stackoverflow.com/questions/59408320/github-action-to-copy-a-file-from-one-repo-to-another)
- - [github push action (by @ad-m)](https://github.com/ad-m/github-push-action)
- - [run Github Actions locally](https://github.com/nektos/act)
- - [manually trigger Github Actions](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e)
+ - [Github action to copy a file from one repo to another](https://stackoverflow.com/questions/59408320/github-action-to-copy-a-file-from-one-repo-to-another)
+ - [Github push action (by @ad-m)](https://github.com/ad-m/github-push-action)
+ - [Run Github actions locally](https://github.com/nektos/act)
+ - [Manually trigger Github actions](https://dev.to/s_abderemane/manual-trigger-with-github-actions-279e)
+ - [How to run Jupiter, Keras, Tensorflow, Pandas, Sklearn and Matplotlib in Docker container](https://medium.com/@andreimaksimov/how-to-run-jupiter-keras-tensorflow-pandas-sklearn-and-matplotlib-in-docker-container-35a49fd4b175)
+ - [Context and expression syntax for GitHub actions](https://help.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions)
+ - [Support saving environment variables between steps](https://github.community/t5/GitHub-Actions/Support-saving-environment-variables-between-steps/td-p/31373)
 
- - [how-to-run-jupiter-keras-tensorflow-pandas-sklearn-and-matplotlib-in-docker-container](https://medium.com/@andreimaksimov/how-to-run-jupiter-keras-tensorflow-pandas-sklearn-and-matplotlib-in-docker-container-35a49fd4b175)
+
+# NOTES-TO-SELF
 
  # run locally (windows)
   - install chocolatey
