@@ -21,5 +21,17 @@ jobs:
     - name: exctract something from github context
       env:
         COMMENT: ${{ toJson(github['event']['comment']) }}
-      run:
+      run: |
         echo "$COMMENT"
+        echo "issue id ${{ github.event.issue.number }}"
+    - name: Create new comment
+      uses: peter-evans/create-or-update-comment@v1
+      with:
+        issue-number: ${{ github.event.issue.number }}
+        body: |
+          This is a multi-line test comment
+          - With GitHub **Markdown**
+          - Created by [create-or-update-comment][1]
+  
+          [1]: https://github.com/peter-evans/create-or-update-comment
+        reactions: '+1'
