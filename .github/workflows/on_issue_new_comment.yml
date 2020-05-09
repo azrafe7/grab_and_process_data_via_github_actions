@@ -11,6 +11,7 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   dump:
+    if: ${{ false }}
     runs-on: ubuntu-latest
     steps:
     - name: print $github
@@ -30,7 +31,7 @@ jobs:
         issue-number: ${{ github.event.issue.number }}
         body: |
           Hello @${{ github.actor }}! :smile:
-          
-          With more reactions now. :hooray:
+
+          With more reactions now. :tada:
 
         reactions: eyes, heart, laugh

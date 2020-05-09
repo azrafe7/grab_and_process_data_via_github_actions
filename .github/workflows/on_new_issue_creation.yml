@@ -11,6 +11,7 @@ on:
 jobs:
   dump:
     runs-on: ubuntu-latest
+    if: ${{ false }}
     steps:
     - name: print $github
       env:
