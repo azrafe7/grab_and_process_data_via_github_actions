@@ -6,7 +6,7 @@ commonmark==0.9.1
 importlib-metadata==1.6.0
 jsonschema==3.2.0
 more-itertools==8.2.0
-numpy==1.18.3
+numpy==1.22.0
 packaging==20.3
 pandas==1.0.3
 pluggy==0.13.1
