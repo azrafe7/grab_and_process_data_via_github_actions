@@ -12,7 +12,7 @@ pandas==1.0.3
 pluggy==0.13.1
 pprintpp==0.4.0
 py==1.10.0
-Pygments==2.7.4
+Pygments==2.15.0
 pyparsing==2.4.7
 pyrsistent==0.16.0
 pytest==5.4.1
